@@ -29,12 +29,12 @@ export default function Portfolio() {
     <ParallaxProvider>
       <div className="bg-black text-white font-sans">
         {/* Navbar */}
-        <nav className="fixed w-full bg-black/80 backdrop-blur-lg z-50 flex justify-center gap-8 py-4 border-b border-gray-800">
+        <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-lg z-50 flex flex-wrap justify-center gap-4 md:gap-8 py-3 px-4 border-b border-gray-800">
           {sections.map((sec) => (
             <button
               key={sec.id}
               onClick={() => scrollToSection(sec.id)}
-              className="text-gray-300 hover:text-white transition-all duration-300"
+              className="text-sm md:text-base text-gray-300 hover:text-white transition-all duration-300"
             >
               {sec.label}
             </button>
@@ -44,7 +44,7 @@ export default function Portfolio() {
         {/* Hero Section */}
         <section
           id="about"
-          className="h-screen flex flex-col items-center justify-center relative overflow-hidden"
+          className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-28 md:pt-32 px-6 text-center"
         >
           <Parallax speed={-20}>
             {/* Profile Image */}
@@ -72,7 +72,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="text-6xl font-extrabold text-center bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent"
             >
               Hey, I'm Vishnu 👋
             </motion.h1>
@@ -83,7 +83,7 @@ export default function Portfolio() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="text-xl text-gray-400 mt-4 text-center max-w-2xl"
+              className="text-base sm:text-lg text-gray-400 mt-4 text-center max-w-2xl mx-auto"
             >
               Dedicated Software Developer Currently Studying and Building Crazy stuff. Self motivated undergrad with passion for Full Stack and Contributing towards Society. And also I do Math.
             </motion.p>
